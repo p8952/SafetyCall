@@ -7,7 +7,8 @@
   "repository": "git@github.com:p8952/SafetyCall.git",
   "dependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "netlify-lambda": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -33,7 +34,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "serve": "webpack-dev-server --mode=development",
+    "lambda": "npx netlify-lambda serve functions/",
+    "webpack": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   }
 }
