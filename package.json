@@ -38,8 +38,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "components": "styleguidist server",
     "lambda": "netlify-lambda serve src/functions/",
+    "components": "styleguidist server",
     "webpack": "webpack-dev-server --mode=development",
     "build": "rm -rf dist_functions/ ; netlify-lambda build src/functions/ && rm -rf dist_website/ ; webpack --mode=production"
   }
