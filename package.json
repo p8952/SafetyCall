@@ -5,35 +5,41 @@
   "author": "Peter Wilmott <p@p8952.info>",
   "license": "AGPLv3",
   "repository": "git@github.com:p8952/SafetyCall.git",
-  "dependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint-plugin-react": "^7.11.1",
-    "netlify-lambda": "^1.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "bulma": "^0.7.2",
     "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^2.0.0",
+    "eslint": "^5.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "eslint": "^5.1.0",
+    "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "netlify-lambda": "^1.1.0",
+    "node-sass": "^4.10.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.13.7",
-    "react-dom": "^16.5.0",
     "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-styleguidist": "^8.0.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.18.0",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8",
-    "webpack": "^4.18.0"
+    "webpack-dev-server": "^3.1.8"
   },
   "pre-commit": [
     "lint"
   ],
   "scripts": {
     "lint": "eslint .",
+    "components": "styleguidist server",
     "lambda": "npx netlify-lambda serve functions/",
     "webpack": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
