@@ -7,12 +7,12 @@
   "repository": "git@github.com:p8952/SafetyCall.git",
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^7.1.5",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^8.0.0",
     "bulma": "^0.7.2",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^2.0.0",
@@ -40,7 +40,7 @@
   "scripts": {
     "lint": "eslint .",
     "components": "styleguidist server",
-    "lambda": "npx netlify-lambda serve src/functions/",
+    "lambda": "netlify-lambda serve src/functions/",
     "webpack": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   }
