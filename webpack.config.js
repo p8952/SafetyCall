@@ -1,6 +1,5 @@
 const path = require("path");
 
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -34,14 +33,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([path.resolve(__dirname, "dist")]),
     new HtmlWebpackPlugin({
       template: "./src/website/index.html"
     })
   ],
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist_website/")
   },
   devServer: {
     proxy: {

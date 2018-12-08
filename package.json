@@ -14,7 +14,6 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.0",
     "bulma": "^0.7.2",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^2.0.0",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -42,6 +41,6 @@
     "components": "styleguidist server",
     "lambda": "netlify-lambda serve src/functions/",
     "webpack": "webpack-dev-server --mode=development",
-    "build": "webpack --mode=production"
+    "build": "rm -rf dist_functions/ ; netlify-lambda build src/functions/ && rm -rf dist_website/ ; webpack --mode=production"
   }
 }
