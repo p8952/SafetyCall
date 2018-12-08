@@ -40,7 +40,7 @@
   "scripts": {
     "lint": "eslint .",
     "components": "styleguidist server",
-    "lambda": "npx netlify-lambda serve functions/",
+    "lambda": "npx netlify-lambda serve src/functions/",
     "webpack": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   }
