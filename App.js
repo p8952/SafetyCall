@@ -10,13 +10,15 @@ export default class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       fetch(".netlify/functions/helloWorld")
-        .then(function(response) {
+        .then((response) => {
           return response.json();
         })
-        .then((data) =>
-          this.setState({ loading: false, message: data.message })
-        )
-        .catch((error) => this.setState({ loading: false, error: error }));
+        .then((data) => {
+          this.setState({ loading: false, message: data.message });
+        })
+        .catch((error) => {
+          this.setState({ loading: false, error: error });
+        });
     }, 2500);
   }
 
